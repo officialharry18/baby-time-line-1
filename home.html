@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome Baby!</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap" rel="stylesheet">
+
+  <script>
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+      window.location.href = "index.html";
+    }
+  </script>
+</head>
+
+<script>
+  function openModal(imgElement) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    modal.style.display = "block";
+    modalImg.src = imgElement.src;
+  }
+
+  function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+  }
+
+  function logout() {
+    localStorage.removeItem("isLoggedIn");
+    window.location.href = "index.html";
+  }
+</script>
+
+<body>
+  <header>
+    <h1>👶 Welcome to Baby's World!</h1>
+    <p>Our little star has arrived ✨</p>
+    <div class="floating-hearts">
+      <span class="heart">❤️</span>
+      <span class="heart">💖</span>
+      <span class="heart">💘</span>
+      <span class="heart">💕</span>
+      <span class="heart">💓</span>
+    </div>
+  </header>
+
+  <section id="birth-details">
+    <h2>🎂 Birth Details</h2>
+    <ul>
+      <li><strong>Date:</strong> 21 March 2025</li>
+      <li><strong>Time:</strong> 10:30 PM</li>
+      <li><strong>Weight:</strong> 3.2 kg</li>
+      <li><strong>Hospital:</strong> Little Star Hospital</li>
+    </ul>
+  </section>
+
+  <section id="music-player">
+    <h2>🎵 Relaxing Music</h2>
+    <audio id="audio-player" controls loop>
+      <source src="f.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <section id="gallery">
+    <h2>📸 Photo Gallery</h2>
+    <div class="photos">
+      <img src="b1.jpg" alt="Baby Photo 1" onclick="openModal(this)">
+      <img src="b7.jpg" alt="Baby Photo 7" onclick="openModal(this)">
+      <img src="b4.jpg" alt="Baby Photo 4" onclick="openModal(this)">
+      <img src="b5.jpg" alt="Baby Photo 5" onclick="openModal(this)">
+      <img src="b6.jpg" alt="Baby Photo 6" onclick="openModal(this)">
+      <img src="b2.jpg" alt="Baby Photo 2" onclick="openModal(this)">
+      <img src="b3.jpg" alt="Baby Photo 3" onclick="openModal(this)">
+    </div>
+  </section>
+
+  <section id="family-msg">
+    <h2>❤️ Family Messages</h2>
+    <div class="messages">
+      <div class="msg">"Jab tujhe godh mein liya, dil ro diya – khushi se." – Dada</div>
+      <div class="msg">"Tujhe dekh kar lagta hai, khuda ne apne haathon se banaya hai." – Dadi</div>
+      <div class="msg">"Tum aaye ho to zindagi khil gayi!" – Nana</div>
+      <div class="msg">"Nani ka laadla, sabka pyara!" – Nani</div>
+      <div class="msg">"Teri muskurahat hi hamari duniya hai!" – Papa</div>
+      <div class="msg">"Chhoti si jaan, le aayi khushi ka toofan!" – Mummy</div>
+      <div class="msg">"Masi ka pyaar maa se kam nahi hota, tu is pyaar ka sabse khoobsurat sabab hai." – Masi</div>
+      <div class="msg">"Har din tera chehra dekhkar shuru karna hai!" – Didi</div>
+      <div class="msg">"Tera hansna, tera palak jhapakna bhi, mere dil ke sabse kareeb hai." – (Rohit) Mama</div>
+    </div>
+  </section>
+
+  <section id="baby-blog">
+    <h2>✍️ Baby Blog</h2>
+    <div class="blog-post">
+      <h3>Week 1: Pehla Rona – Pehla Hero Moment</h3>
+      <p>Aaj thoda sa ro diya, lekin jaise hi maasi ne godh liya, chup ho gaya. Hero ban gaya hai baby!</p>
+    </div>
+    <div class="blog-post">
+      <h3>Week 2: Ninni Aur Sapne</h3>
+      <p>Is hafte baby zyada so raha hai – ninni ke beech mein chhoti chhoti smiles aati hain. Lagta hai sapno mein hum sab se mil raha hai.</p>
+    </div>
+    <div class="blog-post">
+      <h3>Week 3: Pehli Muskaan</h3>
+      <p>Hamare chhote se angel ne pehli baar muskuraya. Sab ghar wale bas usi muskaan mein kho gaye. Itna chhota sa chehra, itni badi khushi!</p>
+    </div>
+    <div class="blog-post">
+      <h3>Week 4: Nazar Na Lage</h3>
+      <p>Sab keh rahe hain "kitna pyara hai", har koi nazar utaar raha hai. Baby ka charm sab pe chhaya hua hai!</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Made with ❤️ for our baby</p>
+    <p>Created by Harry</p>
+    <p>IG: @itz_harry_official_1808</p>
+    <button onclick="logout()">Logout</button>
+  </footer>
+</body>
+
+</html>

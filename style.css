@@ -1,0 +1,161 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  background: #fffafc;
+  color: #0f0f0f;
+  line-height: 1.6;
+}
+
+header {
+  background: #ffb6c1;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  animation: floatHeader 1s ease-in-out infinite alternate;
+}
+
+@keyframes floatHeader {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(10px); }
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #430ade;
+}
+
+section {
+  padding: 2rem;
+  margin: 1rem 0;
+}
+
+#birth-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+#birth-details li {
+  margin-bottom: 0.5rem;
+}
+
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.photos img {
+  width: 200px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.photos img:hover {
+  transform: scale(1.05);
+}
+
+.messages {
+  display: grid;
+  gap: 1rem;
+}
+
+.msg {
+  background: #f7cde8;
+  padding: 1rem;
+  border-radius: 10px;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.blog-post {
+  background: #b7e1ed;
+  padding: 1rem;
+  border-left: 4px solid #f06292;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  background: #f587ab;
+  color: rgb(35, 21, 21);
+  padding: 0.5rem;
+  margin-top: 2rem;
+}
+
+
+body {
+
+.login-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+  animation: zoom 0.4s;
+  border-radius: 12px;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.6)} 
+  to {transform: scale(1)}
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.photos img {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.photos img:hover {
+  transform: scale(1.05);
+}
